@@ -52,7 +52,7 @@ h2{font-size:17px;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid 
 <div class="card">
 <h3>1. 真相是一切的基础</h3>
 <div class="quote-block">
-<p class="en">Truth — more precisely, an accurate understanding of reality — is the essential foundation for producing good outcomes.<button class="play-btn" onclick="speak(this,'Truth, more precisely, an accurate understanding of reality, is the essential foundation for producing good outcomes.')">🔊</button></p>
+<p class="en">Truth — more precisely, an accurate understanding of reality — is the essential foundation for producing good outcomes.<button class="play-btn" onclick="speak(this,'Truth, more precisely, an accurate understanding of reality, is the essential foundation for producing good outcomes.','en')">🔊</button></p>
 <p class="zh">真相——更准确地说，对现实的准确理解——是产生好结果的基础。</p>
 </div>
 <div class="insight"><strong>解读</strong>：你不需要喜欢现实，但你需要准确理解它。就像医生不需要喜欢疾病，但必须准确诊断才能治疗。</div>
@@ -61,7 +61,7 @@ h2{font-size:17px;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid 
 <div class="card">
 <h3>2. 做一个超级现实的人</h3>
 <div class="quote-block">
-<p class="en">People who get what they want out of life are those who are grounded in reality and work with it to get what they want.<button class="play-btn" onclick="speak(this,'People who get what they want out of life are those who are grounded in reality and work with it to get what they want.')">🔊</button></p>
+<p class="en">People who get what they want out of life are those who are grounded in reality and work with it to get what they want.<button class="play-btn" onclick="speak(this,'People who get what they want out of life are those who are grounded in reality and work with it to get what they want.','en')">🔊</button></p>
 <p class="zh">从生活中得到自己想要的东西的人，是那些扎根于现实并与现实合作的人。</p>
 </div>
 <div class="insight"><strong>解读</strong>：理想主义和现实主义不是对立的。真正的理想主义者，是最务实的现实主义者——因为他们知道如何把梦想变成现实。</div>
@@ -70,7 +70,7 @@ h2{font-size:17px;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid 
 <div class="card">
 <h3>3. 梦想 + 现实 + 决心</h3>
 <div class="quote-block">
-<p class="en">Dreams + Reality + Determination = A Successful Life<button class="play-btn" onclick="speak(this,'Dreams plus Reality plus Determination equals A Successful Life.')">🔊</button></p>
+<p class="en">Dreams + Reality + Determination = A Successful Life<button class="play-btn" onclick="speak(this,'Dreams plus Reality plus Determination equals A Successful Life.','en')">🔊</button></p>
 <p class="zh">梦想 + 现实 + 决心 = 成功的生活</p>
 </div>
 <div class="insight"><strong>解读</strong>：这三个要素缺一不可。只有梦想没有现实，是空想；只有现实没有梦想，是平庸；有了梦想和现实但没有决心，是半途而废。</div>
@@ -79,7 +79,7 @@ h2{font-size:17px;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid 
 <div class="card">
 <h3>4. 不要让偏见阻碍你</h3>
 <div class="quote-block">
-<p class="en">Don't let biases stand in the way of objectivity. To get around your biases, you need to deliberately seek out people who disagree with you.<button class="play-btn" onclick="speak(this,'Dont let biases stand in the way of objectivity. To get around your biases, you need to deliberately seek out people who disagree with you.')">🔊</button></p>
+<p class="en">Don't let biases stand in the way of objectivity. To get around your biases, you need to deliberately seek out people who disagree with you.<button class="play-btn" onclick="speak(this,'Dont let biases stand in the way of objectivity. To get around your biases, you need to deliberately seek out people who disagree with you.','en')">🔊</button></p>
 <p class="zh">不要让偏见阻碍你的客观性。要克服偏见，你需要刻意寻找与你意见不同的人。</p>
 </div>
 <div class="insight"><strong>解读</strong>：最难的不是听到反对意见，而是<strong>主动去寻找</strong>反对意见。这需要你承认：我可能是错的。</div>
@@ -88,7 +88,7 @@ h2{font-size:17px;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid 
 <div class="card">
 <h3>5. 痛苦是信号</h3>
 <div class="quote-block">
-<p class="en">Pain is a signal that you need to find a solution. If you can develop a reflexive reaction to pain that is to move toward it, you will make extraordinary progress.<button class="play-btn" onclick="speak(this,'Pain is a signal that you need to find a solution. If you can develop a reflexive reaction to pain that is to move toward it, you will make extraordinary progress.')">🔊</button></p>
+<p class="en">Pain is a signal that you need to find a solution. If you can develop a reflexive reaction to pain that is to move toward it, you will make extraordinary progress.<button class="play-btn" onclick="speak(this,'Pain is a signal that you need to find a solution. If you can develop a reflexive reaction to pain that is to move toward it, you will make extraordinary progress.','en')">🔊</button></p>
 <p class="zh">痛苦是一个信号，告诉你需要找到解决方案。如果你能养成面对痛苦的本能反应——走向它——你将取得非凡的进步。</p>
 </div>
 <div class="insight"><strong>解读</strong>：这是达利欧最核心的习惯。痛苦 + 反思 = 进步。大多数人遇到痛苦就躲，达利欧遇到痛苦就冲上去问"为什么"。</div>
@@ -119,12 +119,16 @@ h2{font-size:17px;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid 
 </div>
 
 <script>
-function speak(btn,text){
-if(window.speechSynthesis.speaking){window.speechSynthesis.cancel();document.querySelectorAll('.play-btn').forEach(b=>{b.classList.remove('playing');b.textContent='🔊'})}
-const u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=0.9;
-u.onstart=()=>{btn.classList.add('playing');btn.textContent='⏹'};
-u.onend=()=>{btn.classList.remove('playing');btn.textContent='🔊'};
-window.speechSynthesis.speak(u)}
+var _audio=null;
+function speak(btn,text,lang){
+lang=lang||'en';
+if(_audio){_audio.pause();_audio=null;document.querySelectorAll('.play-btn').forEach(function(b){b.classList.remove('playing');b.textContent='🔊'})}
+var a=new Audio('https://translate.google.com/translate_tts?ie=UTF-8&tl='+lang+'&client=tw-ob&q='+encodeURIComponent(text));
+_audio=a;
+a.onplay=function(){btn.classList.add('playing');btn.textContent='⏹'};
+a.onended=function(){btn.classList.remove('playing');btn.textContent='🔊';_audio=null};
+a.onerror=function(){btn.classList.remove('playing');btn.textContent='🔊';_audio=null};
+a.play()}
 </script>
 </body>
 </html>
