@@ -8,92 +8,46 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f6f8fa; color: #24292f; padding: 16px; }
   .container { max-width: 600px; margin: 0 auto; }
-  h1 { text-align: center; font-size: 22px; margin-bottom: 20px; }
-  .card { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-  .card h2 { font-size: 17px; margin-bottom: 6px; }
-  .card .desc { font-size: 13px; color: #656d76; margin-bottom: 10px; }
-  .link-group { margin-bottom: 8px; }
-  .link-group-title { font-size: 12px; color: #8b949e; margin-bottom: 4px; font-weight: 600; }
-  .link-row { display: flex; align-items: center; gap: 6px; margin-bottom: 4px; }
-  .link-row a { color: #0969da; text-decoration: none; font-size: 13px; word-break: break-all; flex: 1; }
-  .copy-btn { background: #0969da; color: #fff; border: none; border-radius: 5px; padding: 4px 10px; font-size: 12px; cursor: pointer; white-space: nowrap; flex-shrink: 0; }
-  .copy-btn:active { background: #0550ae; }
-  .note-link { display: block; background: #ddf4ff; color: #0969da; border-radius: 8px; padding: 10px 14px; text-decoration: none; font-size: 15px; font-weight: 600; text-align: center; margin-bottom: 10px; }
-  .note-link:active { background: #b6e3ff; }
-  .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #24292f; color: #fff; padding: 8px 20px; border-radius: 8px; font-size: 13px; opacity: 0; transition: opacity 0.3s; pointer-events: none; }
-  .toast.show { opacity: 1; }
+  h1 { text-align: center; font-size: 24px; margin-bottom: 20px; }
+  .card { background: #fff; border-radius: 12px; padding: 18px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-decoration: none; display: block; color: inherit; }
+  .card:active { background: #f0f6ff; }
+  .card h2 { font-size: 18px; margin-bottom: 6px; }
+  .card .desc { font-size: 13px; color: #656d76; margin-bottom: 8px; }
+  .card .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .card .tag { background: #ddf4ff; color: #0969da; padding: 2px 8px; border-radius: 10px; font-size: 11px; }
+  .card .tag.audio { background: #fff8c5; color: #9a6700; }
+  .footer { text-align: center; font-size: 12px; color: #8b949e; margin-top: 20px; }
 </style>
 </head>
 <body>
 <div class="container">
   <h1>📚 学习笔记</h1>
 
-  <!-- 小王子 -->
-  <div class="card">
-    <h2>🌹 小王子读书笔记</h2>
-    <p class="desc">核心思想、人物象征、经典语录（中法对照）、个人思考</p>
-    <a class="note-link" href="https://github.com/hcqchris/learningnotes/blob/main/小王子/小王子读书笔记.md">📖 打开完整笔记</a>
-    <div class="link-group">
-      <div class="link-group-title">原文阅读</div>
-      <div class="link-row"><a href="https://www.ebooksgratuits.com/pdf/st_exupery_le_petit_prince.pdf">法语原文 PDF 下载</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-      <div class="link-row"><a href="https://archive.org/stream/petitprince2/petitprince2_djvu.txt">法语原文在线（Archive.org）</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-      <div class="link-row"><a href="https://read.douban.com/reader/ebook/413232573/">中法对照版（豆瓣阅读）</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-      <div class="link-row"><a href="https://bilinguator.com/en/online?book=253">英法对照版（Bilinguator）</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-      <div class="link-row"><a href="https://www.diancang.xyz/waiguomingzhu/9227/">中文在线阅读（中华典藏）</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
+  <a class="card" href="./小王子/index.html">
+    <h2>🌹 小王子</h2>
+    <p class="desc">Le Petit Prince — 安东尼·德·圣-埃克苏佩里</p>
+    <div class="tags">
+      <span class="tag">中法对照</span>
+      <span class="tag audio">🔊 法语朗读</span>
+      <span class="tag">核心思想</span>
+      <span class="tag">人物象征</span>
+      <span class="tag">原文链接</span>
     </div>
-    <div class="link-group">
-      <div class="link-group-title">法语朗读 / 音频</div>
-      <div class="link-row"><a href="https://www.ximalaya.com/waiyu/12655018/">喜马拉雅法语有声书</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-      <div class="link-row"><a href="https://oldaudio.sflep.com/User/Listen/DownLoadDetail.aspx?bookId=3568">外教社法语悦读音频</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-      <div class="link-row"><a href="https://www.qtfm.cn/channels/407988/">蜻蜓FM法语有声书</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-    </div>
-  </div>
+  </a>
 
-  <!-- 原则 -->
-  <div class="card">
-    <h2>📐 原则读书笔记</h2>
-    <p class="desc">五步流程、生活/工作原则（中英对照）、实践思考、延伸阅读</p>
-    <a class="note-link" href="https://github.com/hcqchris/learningnotes/blob/main/原则/原则读书笔记.md">📖 打开完整笔记</a>
-    <div class="link-group">
-      <div class="link-group-title">原文阅读</div>
-      <div class="link-row"><a href="https://www.kancloud.cn/apachecn/principles-zh/1947323">中文在线阅读（看云）</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-      <div class="link-row"><a href="https://weread.qq.com/web/reader/848324405e0fe08483ab6a4">微信读书版</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-      <div class="link-row"><a href="https://read.douban.com/reader/ebook/609925999/">豆瓣阅读增订版</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-      <div class="link-row"><a href="https://gitee.com/it-ebooks/principles-zh">中文开源版（PDF/EPUB/MOBI）</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
+  <a class="card" href="./原则/index.html">
+    <h2>📐 原则</h2>
+    <p class="desc">Principles: Life and Work — 瑞·达利欧</p>
+    <div class="tags">
+      <span class="tag">中英对照</span>
+      <span class="tag audio">🔊 英语朗读</span>
+      <span class="tag">五步流程</span>
+      <span class="tag">工作原则</span>
+      <span class="tag">原文链接</span>
     </div>
-  </div>
+  </a>
 
-  <!-- 仓库 -->
-  <div class="card">
-    <h2>🏠 GitHub 仓库</h2>
-    <p class="desc">所有笔记的源文件，永久托管</p>
-    <div class="link-row"><a href="https://github.com/hcqchris/learningnotes">github.com/hcqchris/learningnotes</a><button class="copy-btn" onclick="copyText(this.previousElementSibling.href)">复制</button></div>
-  </div>
+  <p class="footer">永久托管于 GitHub · 每段外语旁可点击 🔊 朗读</p>
 </div>
-
-<div class="toast" id="toast">已复制到剪贴板</div>
-
-<script>
-function copyText(text) {
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(() => showToast());
-  } else {
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.position = 'fixed';
-    ta.style.opacity = '0';
-    document.body.appendChild(ta);
-    ta.select();
-    document.execCommand('copy');
-    document.body.removeChild(ta);
-    showToast();
-  }
-}
-function showToast() {
-  const t = document.getElementById('toast');
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 1500);
-}
-</script>
 </body>
 </html>

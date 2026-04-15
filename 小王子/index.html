@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌹 小王子读书笔记</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f6f8fa; color: #24292f; padding: 16px; line-height: 1.7; }
+  .container { max-width: 680px; margin: 0 auto; }
+  h1 { text-align: center; font-size: 22px; margin-bottom: 6px; }
+  .subtitle { text-align: center; color: #656d76; font-size: 13px; margin-bottom: 20px; }
+  h2 { font-size: 18px; margin: 24px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #0969da; }
+  h3 { font-size: 15px; margin: 16px 0 8px; color: #0969da; }
+  .card { background: #fff; border-radius: 12px; padding: 16px; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 8px 0; }
+  th, td { border: 1px solid #d0d7de; padding: 6px 10px; text-align: left; }
+  th { background: #f6f8fa; }
+  .quote-block { background: #fff8c5; border-left: 4px solid #d4a72c; padding: 10px 14px; margin: 10px 0; border-radius: 0 8px 8px 0; }
+  .quote-block p { margin: 4px 0; }
+  .fr { font-style: italic; color: #57606a; }
+  .zh { font-weight: 500; }
+  .play-btn { display: inline-flex; align-items: center; gap: 4px; background: #0969da; color: #fff; border: none; border-radius: 16px; padding: 3px 10px; font-size: 12px; cursor: pointer; vertical-align: middle; margin-left: 6px; }
+  .play-btn:active { background: #0550ae; }
+  .play-btn.playing { background: #cf222e; }
+  .play-btn svg { width: 14px; height: 14px; fill: currentColor; }
+  .insight { background: #ddf4ff; padding: 10px 14px; border-radius: 8px; margin: 6px 0; font-size: 14px; }
+  .insight strong { color: #0969da; }
+  .resource-link { display: block; color: #0969da; text-decoration: none; font-size: 13px; padding: 4px 0; }
+  .resource-link:active { color: #0550ae; }
+  .back-link { display: block; text-align: center; margin-top: 20px; padding: 10px; background: #fff; border-radius: 8px; color: #0969da; text-decoration: none; font-size: 14px; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>🌹 小王子读书笔记</h1>
+  <p class="subtitle">Le Petit Prince — Antoine de Saint-Exupéry</p>
+
+  <!-- 基本信息 -->
+  <div class="card">
+    <table>
+      <tr><th>书名</th><td>《小王子》（Le Petit Prince）</td></tr>
+      <tr><th>作者</th><td>安东尼·德·圣-埃克苏佩里</td></tr>
+      <tr><th>首版</th><td>1943年（纽约）；1946年（法国）</td></tr>
+      <tr><th>体裁</th><td>哲学童话 / 寓言</td></tr>
+      <tr><th>原文语言</th><td>法语</td></tr>
+    </table>
+  </div>
+
+  <!-- 原文阅读 -->
+  <h2>📖 原文阅读</h2>
+  <div class="card">
+    <a class="resource-link" href="https://www.ebooksgratuits.com/pdf/st_exupery_le_petit_prince.pdf">📄 法语原文 PDF 下载（免费）</a>
+    <a class="resource-link" href="https://archive.org/stream/petitprince2/petitprince2_djvu.txt">📄 法语原文在线（Archive.org）</a>
+    <a class="resource-link" href="https://read.douban.com/reader/ebook/413232573/">📄 中法对照版（豆瓣阅读）</a>
+    <a class="resource-link" href="https://bilinguator.com/en/online?book=253">📄 英法对照版（Bilinguator）</a>
+    <a class="resource-link" href="https://www.diancang.xyz/waiguomingzhu/9227/">📄 中文在线阅读（中华典藏）</a>
+  </div>
+
+  <!-- 法语朗读 -->
+  <h2>🎧 法语朗读资源</h2>
+  <div class="card">
+    <a class="resource-link" href="https://www.ximalaya.com/waiyu/12655018/">🎙️ 喜马拉雅法语有声书（完整版）</a>
+    <a class="resource-link" href="https://oldaudio.sflep.com/User/Listen/DownLoadDetail.aspx?bookId=3568">🎙️ 外教社法语悦读音频（MP3下载）</a>
+    <a class="resource-link" href="https://www.qtfm.cn/channels/407988/">🎙️ 蜻蜓FM法语有声书</a>
+    <p style="font-size:12px;color:#8b949e;margin-top:6px;">💡 下方每段法语旁的 🔊 按钮可在线朗读</p>
+  </div>
+
+  <!-- 第一章 -->
+  <h2>📚 各章节要点</h2>
+
+  <h3>第一章 · Chapitre I — 画与大人</h3>
+  <div class="card">
+    <div class="quote-block">
+      <p class="fr">Lorsque j'avais six ans j'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s'appelait "Histoires Vécues".<button class="play-btn" onclick="speak(this, 'Lorsque j\'avais six ans j\'ai vu, une fois, une magnifique image, dans un livre sur la Forêt Vierge qui s\'appelait Histoires Vécues.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">当我六岁的时候，在一本叫《真实的故事》的书里看到一幅精彩的图画。</p>
+    </div>
+    <div class="insight"><strong>核心</strong>：大人失去了想象力，只认得"有用的"东西。</div>
+  </div>
+
+  <!-- 第四章 -->
+  <h3>第四章 · Chapitre IV — B612 小行星</h3>
+  <div class="card">
+    <div class="quote-block">
+      <p class="fr">J'ai ainsi vécu seul, sans personne avec qui parler véritablement, jusqu'à une panne dans le désert du Sahara.<button class="play-btn" onclick="speak(this, 'J\'ai ainsi vécu seul, sans personne avec qui parler véritablement, jusqu\'à une panne dans le désert du Sahara.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">我就这样孤独地生活着，没有一个真正能交谈的人，直到在撒哈拉沙漠发生了一次故障。</p>
+    </div>
+    <div class="insight"><strong>核心</strong>：大人只关心数字，不关心本质。</div>
+  </div>
+
+  <!-- 第七章 -->
+  <h3>第七章 · Chapitre VII — 玫瑰与重要的事</h3>
+  <div class="card">
+    <div class="quote-block">
+      <p class="fr">Si quelqu'un aime une fleur qui n'existe qu'à un exemplaire dans les millions et les millions d'étoiles, ça suffit pour qu'il soit heureux quand il les regarde.<button class="play-btn" onclick="speak(this, 'Si quelqu\'un aime une fleur qui n\'existe qu\'à un exemplaire dans les millions et les millions d\'étoiles, ça suffit pour qu\'il soit heureux quand il les regarde.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">如果有人爱上一朵花，而这朵花在亿万颗星星中只存在一朵，那就足以让他在仰望星空时感到幸福。</p>
+    </div>
+    <div class="insight"><strong>核心</strong>：应该看行为，而不是听言辞。</div>
+  </div>
+
+  <!-- 第二十一章 -->
+  <h3>第二十一章 · Chapitre XXI — 驯养</h3>
+  <div class="card">
+    <div class="quote-block">
+      <p class="fr">On ne connaît que les choses que l'on apprivoise... Les hommes ont oublié cette vérité.<button class="play-btn" onclick="speak(this, 'On ne connaît que les choses que l\'on apprivoise. Les hommes ont oublié cette vérité.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">人们只了解自己驯养的东西……人们已经忘记了这条真理。</p>
+    </div>
+    <div class="quote-block">
+      <p class="fr">C'est le temps que tu as perdu pour ta rose qui fait ta rose si importante.<button class="play-btn" onclick="speak(this, 'C\'est le temps que tu as perdu pour ta rose qui fait ta rose si importante.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">你为你的玫瑰花费的时间，使你的玫瑰变得如此重要。</p>
+    </div>
+    <div class="quote-block">
+      <p class="fr">Tu deviens responsable pour toujours de ce que tu as apprivoisé.<button class="play-btn" onclick="speak(this, 'Tu deviens responsable pour toujours de ce que tu as apprivoisé.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">你永远要对你驯养的东西负责。</p>
+    </div>
+    <div class="insight"><strong>核心</strong>：只有用心投入，关系才有意义。驯养 = 投入时间、情感和责任。</div>
+  </div>
+
+  <!-- 第二十六章 -->
+  <h3>第二十六章 · Chapitre XXVI — 离别</h3>
+  <div class="card">
+    <div class="quote-block">
+      <p class="fr">Les étoiles, c'est facile, tu n'as qu'à regarder le ciel et je rirai de l'une des étoiles comme si j'avais le cœur qui rit.<button class="play-btn" onclick="speak(this, 'Les étoiles, c\'est facile, tu n\'as qu\'à regarder le ciel et je rirai de l\'une des étoiles comme si j\'avais le cœur qui rit.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">星星很简单，你只需要仰望天空，我会在其中一颗星星上笑，就像我的心在笑一样。</p>
+    </div>
+    <div class="insight"><strong>核心</strong>：真正的爱是选择负责，哪怕付出代价。</div>
+  </div>
+
+  <!-- 核心思想 -->
+  <h2>💡 核心思想</h2>
+
+  <h3>1. 用心才能看见本质</h3>
+  <div class="card">
+    <div class="quote-block">
+      <p class="fr">On ne voit bien qu'avec le cœur. L'essentiel est invisible pour les yeux.<button class="play-btn" onclick="speak(this, 'On ne voit bien qu\'avec le cœur. L\'essentiel est invisible pour les yeux.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">看东西只有用心才能看清楚，重要的东西用眼睛是看不见的。</p>
+    </div>
+    <div class="insight">真正重要的东西——爱、友谊、信任——都是无形的。不要被表象迷惑，学会用心感受。</div>
+  </div>
+
+  <h3>2. 驯养 = 建立联系</h3>
+  <div class="card">
+    <div class="insight">驯养（Apprivoiser）意味着投入时间、情感和责任。驯养之前，你只是千千万万中的一个；驯养之后，你变得独一无二。关系的价值不在于对象本身，而在于你在其中投入了什么。</div>
+  </div>
+
+  <h3>3. 责任是驯养的延伸</h3>
+  <div class="card">
+    <div class="insight">小王子要回到玫瑰身边，不是因为她特别，而是因为他为她花了时间。选择负责不是束缚，而是让生命有重量的方式。</div>
+  </div>
+
+  <!-- 六颗星球 -->
+  <h2>🌍 六颗星球的居民</h2>
+  <div class="card">
+    <table>
+      <tr><th>星球</th><th>居民</th><th>象征</th><th>法语</th></tr>
+      <tr><td>第一颗</td><td>国王</td><td>权力欲</td><td>Le Roi</td></tr>
+      <tr><td>第二颗</td><td>爱慕虚荣者</td><td>虚荣心</td><td>Le Vaniteux</td></tr>
+      <tr><td>第三颗</td><td>酒鬼</td><td>逃避</td><td>Le Buveur</td></tr>
+      <tr><td>第四颗</td><td>商人</td><td>贪婪</td><td>Le Businessman</td></tr>
+      <tr><td>第五颗</td><td>点灯人</td><td>墨守成规</td><td>L'Allumeur de réverbères</td></tr>
+      <tr><td>第六颗</td><td>地理学家</td><td>纸上谈兵</td><td>Le Géographe</td></tr>
+    </table>
+  </div>
+
+  <!-- 人物象征 -->
+  <h2>🎭 人物象征解读</h2>
+  <div class="card">
+    <h3>🌹 玫瑰（La Rose）</h3>
+    <p>外表娇弱、任性，内心深爱小王子。象征<strong>初恋</strong>——笨拙、骄傲、不会表达爱。小王子离开后才明白：她不是普通的花，她是"他的"玫瑰。</p>
+    <h3>🦊 狐狸（Le Renard）</h3>
+    <p>全书的"智者"角色，教会小王子"驯养"与"责任"的含义。象征<strong>成熟的爱</strong>——清醒、主动、有选择。</p>
+    <h3>🐍 蛇（Le Serpent）</h3>
+    <p>神秘、危险，却能帮小王子"回家"。象征<strong>死亡的超越</strong>——肉体的终结可能是灵魂的解脱。</p>
+    <h3>🌍 玫瑰园（Le Jardin de roses）</h3>
+    <p>五千朵一模一样的玫瑰让小王子一度崩溃，后来他才明白：她们再美也跟他无关，因为她们没有被驯养。象征<strong>世界上的诱惑很多，但属于你的只有你投入过的那一个</strong>。</p>
+  </div>
+
+  <!-- 经典语录 -->
+  <h2>✨ 经典语录（中法对照）</h2>
+  <div class="card">
+    <div class="quote-block">
+      <p class="fr">Toutes les grandes personnes ont d'abord été des enfants. Mais peu d'entre elles s'en souviennent.<button class="play-btn" onclick="speak(this, 'Toutes les grandes personnes ont d\'abord été des enfants. Mais peu d\'entre elles s\'en souviennent.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">所有大人都曾经是小孩，虽然，只有少数的人记得。</p>
+    </div>
+    <div class="quote-block">
+      <p class="fr">Si tu aimes une fleur qui se trouve dans une étoile, c'est doux, la nuit, de regarder le ciel.<button class="play-btn" onclick="speak(this, 'Si tu aimes une fleur qui se trouve dans une étoile, c\'est doux, la nuit, de regarder le ciel.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">如果你爱上一朵生长在某颗星球上的花，那么当你在夜晚仰望天空时，你会感到甜蜜。</p>
+    </div>
+    <div class="quote-block">
+      <p class="fr">Ce qui embellit le désert, c'est qu'il cache un puits quelque part.<button class="play-btn" onclick="speak(this, 'Ce qui embellit le désert, c\'est qu\'il cache un puits quelque part.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">沙漠之所以美丽，是因为在某个角落藏着一口井。</p>
+    </div>
+    <div class="quote-block">
+      <p class="fr">Si tu viens, par exemple, à quatre heures de l'après-midi, dès trois heures je serai heureux.<button class="play-btn" onclick="speak(this, 'Si tu viens, par exemple, à quatre heures de l\'après-midi, dès trois heures je serai heureux.')"><svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button></p>
+      <p class="zh">如果你说你在下午四点来，从三点钟起我就开始感到幸福。</p>
+    </div>
+  </div>
+
+  <a class="back-link" href="https://hcqchris.github.io/learningnotes/">← 返回导航页</a>
+</div>
+
+<script>
+function speak(btn, text) {
+  if (window.speechSynthesis.speaking) {
+    window.speechSynthesis.cancel();
+    document.querySelectorAll('.play-btn').forEach(b => { b.classList.remove('playing'); b.innerHTML = '<svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊'; });
+  }
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = 'fr-FR';
+  utterance.rate = 0.9;
+  utterance.onstart = () => { btn.classList.add('playing'); btn.innerHTML = '⏹ 停止'; };
+  utterance.onend = () => { btn.classList.remove('playing'); btn.innerHTML = '<svg viewBox="0 0 16 16"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊'; };
+  window.speechSynthesis.speak(utterance);
+}
+</script>
+</body>
+</html>
