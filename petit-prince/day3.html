@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🌹 小王子 Day 3 - 玫瑰与星球的旅行</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#f6f8fa;color:#24292f;padding:16px;line-height:1.7}
+.container{max-width:680px;margin:0 auto}
+.day-badge{display:inline-block;background:#d4a72c;color:#fff;border-radius:16px;padding:4px 14px;font-size:13px;font-weight:600;margin-bottom:10px}
+h1{font-size:22px;margin-bottom:4px}
+.subtitle{color:#656d76;font-size:13px;margin-bottom:20px}
+h2{font-size:17px;margin:22px 0 10px;padding-bottom:6px;border-bottom:2px solid #d4a72c}
+.card{background:#fff;border-radius:12px;padding:16px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,0.08)}
+.quote-block{background:#fff8c5;border-left:4px solid #d4a72c;padding:10px 14px;margin:10px 0;border-radius:0 8px 8px 0}
+.quote-block p{margin:4px 0}
+.fr{font-style:italic;color:#57606a}
+.zh{font-weight:500}
+.play-btn{display:inline-flex;align-items:center;gap:4px;background:#d4a72c;color:#fff;border:none;border-radius:16px;padding:3px 10px;font-size:12px;cursor:pointer;vertical-align:middle;margin-left:6px}
+.play-btn:active{background:#9a6700}
+.play-btn.playing{background:#cf222e}
+.vocab-card{background:#fffbe6;border:1px solid #e3b341;border-radius:10px;padding:12px;margin:8px 0}
+.vocab-card .word{font-size:16px;font-weight:700;color:#9a6700}
+.vocab-card .phonetic{font-size:12px;color:#656d76;margin-left:6px}
+.vocab-card .meaning{font-size:13px;margin-top:4px}
+.vocab-card .example{font-size:12px;color:#57606a;font-style:italic;margin-top:4px}
+.insight{background:#ddf4ff;padding:10px 14px;border-radius:8px;margin:6px 0;font-size:14px}
+.insight strong{color:#0969da}
+.question-box{background:#f0f6ff;border:2px solid #0969da;border-radius:12px;padding:14px;margin:14px 0}
+.question-box h3{color:#0969da;font-size:15px;margin-bottom:8px}
+.back-link{display:block;text-align:center;margin-top:20px;padding:10px;background:#fff;border-radius:8px;color:#0969da;text-decoration:none;font-size:14px;font-weight:600}
+.planet-card{background:linear-gradient(135deg,#f0f6ff 0%,#ddf4ff 100%);border:1px solid #0969da;border-radius:12px;padding:14px;margin:8px 0}
+.planet-card h4{color:#0969da;margin-bottom:4px}
+.planet-card .symbol{font-size:13px;color:#57606a;font-style:italic}
+</style>
+</head>
+<body>
+<div class="container">
+
+<span class="day-badge">Day 3 / 7</span>
+<h1>🌹 玫瑰 · 六颗星球 · 人的荒诞</h1>
+<p class="subtitle">Le Petit Prince — Chapitre VIII ~ XVI</p>
+
+<!-- 第八章 -->
+<h2>📖 第八章 · Chapitre VIII — 玫瑰</h2>
+<div class="card">
+<div class="quote-block">
+<p class="fr">Je ne devais pas m'enfuir ! J'aurais dû deviner sa tendresse derrière ses pauvres ruses. Les fleurs sont si contradictoires ! Mais j'étais trop jeune pour savoir l'aimer.<button class="play-btn" onclick="speak(this,'Je ne devais pas m\\'enfuir ! J\\'aurais dû deviner sa tendresse derrière ses pauvres ruses. Les fleurs sont si contradictoires ! Mais j\\'étais trop jeune pour savoir l\\'aimer.','fr')">🔊</button></p>
+<p class="zh">我不该逃跑！我应该猜到她那些拙劣的小把戏背后的温柔。花儿们就是这么矛盾！但我太年轻了，还不懂得爱她。</p>
+</div>
+<div class="quote-block">
+<p class="fr">Elle avait toussé deux ou trois fois, pour mettre le petit prince dans son tort.<button class="play-btn" onclick="speak(this,'Elle avait toussé deux ou trois fois, pour mettre le petit prince dans son tort.','fr')">🔊</button></p>
+<p class="zh">她咳嗽了两三声，好让小王子觉得自己做错了什么。</p>
+</div>
+<div class="insight"><strong>核心</strong>：玫瑰是初恋的象征——骄傲、任性、不会表达爱，用抱怨和咳嗽来引起注意。小王子离开后才明白：她不是在刁难他，她只是不知道如何说"我需要你"。<strong>听言辞不如看行为</strong>——玫瑰的香气、她的美丽，才是她真正的表达。</div>
+</div>
+
+<!-- 第九章 -->
+<h2>📖 第九章 · Chapitre IX — 离别</h2>
+<div class="card">
+<div class="quote-block">
+<p class="fr">— Bien sûr, je t'aime, dit la fleur. C'est de ma faute si tu ne l'as pas su, ce n'est rien.<button class="play-btn" onclick="speak(this,'Bien sûr, je t\\'aime, dit la fleur. C\\'est de ma faute si tu ne l\\'as pas su, ce n\\'est rien.','fr')">🔊</button></p>
+<p class="zh">"当然，我爱你，"花儿说。"是我的错，你没有知道，这没什么。"</p>
+</div>
+<div class="insight"><strong>核心</strong>：玫瑰终于在离别时说了真话。但为时已晚。多少感情就是这样——明明爱着，却用错误的方式表达，直到失去才说出口。</div>
+</div>
+
+<!-- 第十到十五章 — 六颗星球 -->
+<h2>🌍 第十至十五章 · 六颗星球的居民</h2>
+<div class="card">
+<p>小王子离开玫瑰后，依次访问了六颗星球，每颗星球住着一个"奇怪的大人"：</p>
+
+<div class="planet-card">
+<h4>👑 国王（Le Roi）— 第10章</h4>
+<p class="symbol">"Je suis le roi" — 我是国王</p>
+<p>统治一切，但其实只统治他自己。权力欲的荒诞——需要别人服从，却没有人在乎。</p>
+</div>
+
+<div class="planet-card">
+<h4>🪞 爱慕虚荣者（Le Vaniteux）— 第11章</h4>
+<p class="symbol">"Admire-moi" — 仰慕我吧</p>
+<p>只听得见赞美，听不见真话。虚荣心让人活在别人的目光里。</p>
+</div>
+
+<div class="planet-card">
+<h4>🍷 酒鬼（Le Buveur）— 第12章</h4>
+<p class="symbol">"Je bois pour oublier que j'ai honte de boire" — 喝酒是为了忘记喝酒的羞耻</p>
+<p>最短的章节，最深的讽刺。逃避的循环——用问题本身来逃避问题。</p>
+</div>
+
+<div class="planet-card">
+<h4>💰 商人（Le Businessman）— 第13章</h4>
+<p class="symbol">"Je les compte" — 我在数它们</p>
+<p>占有星星却对它们毫无用处。贪婪：拥有≠拥有意义。</p>
+</div>
+
+<div class="planet-card">
+<h4>💡 点灯人（L'Allumeur de réverbères）— 第14章</h4>
+<p class="symbol">"C'est la consigne" — 这是规定</p>
+<p>唯一让小王子觉得"不荒诞"的大人——因为他在为别人做事，不是为自己。但他从不质疑规定，即使规定已经不合理。</p>
+</div>
+
+<div class="planet-card">
+<h4>🗺️ 地理学家（Le Géographe）— 第15章</h4>
+<p class="symbol">"Je ne suis pas un explorateur" — 我不是探险家</p>
+<p>记录世界却从不亲自去看。纸上谈兵：知道很多关于"永恒"的事，却不关心"转瞬即逝"的花。</p>
+</div>
+
+<div class="insight"><strong>六颗星球的共同点</strong>：每个大人都沉浸在自己的世界里，听不见、看不见其他可能性。这正是达利欧说的"思维盲点"——你以为你看到的就是全部，其实你只看到了你自己。</div>
+</div>
+
+<!-- 第十六章 -->
+<h2>📖 第十六章 · Chapitre XVI — 来到地球</h2>
+<div class="card">
+<div class="quote-block">
+<p class="fr">Les hommes, dit le petit prince, ils se jetent dans les rapides, et ils ne savent plus où ils vont. Ils n'ont plus de but.<button class="play-btn" onclick="speak(this,'Les hommes, dit le petit prince, ils se jetent dans les rapides, et ils ne savent plus où ils vont. Ils n\\'ont plus de but.','fr')">🔊</button></p>
+<p class="zh">"人，"小王子说，"他们把自己扔进急流里，却不知道要去哪里。他们再也没有目标了。"</p>
+</div>
+<div class="insight"><strong>核心</strong>：从星球的寓言到地球的现实——忙忙碌碌却不知去向。小王子看到满车厢的人，不知道自己在找什么，却在不停地赶路。</div>
+</div>
+
+<!-- 核心词汇 -->
+<h2>💡 核心词汇</h2>
+<div class="card">
+<div class="vocab-card">
+<span class="word">rose<button class="play-btn" onclick="speak(this,'rose','fr')">🔊</button></span><span class="phonetic">/ʁoz/</span>
+<div class="meaning">n.f. 玫瑰</div>
+<div class="example">Bien sûr, je t'aime, dit la rose. — "当然，我爱你，"玫瑰说。</div>
+</div>
+<div class="vocab-card">
+<span class="word">roi<button class="play-btn" onclick="speak(this,'roi','fr')">🔊</button></span><span class="phonetic">/ʁwa/</span>
+<div class="meaning">n.m. 国王</div>
+<div class="example">Je suis le roi. — 我是国王。</div>
+</div>
+<div class="vocab-card">
+<span class="word">vaniteux<button class="play-btn" onclick="speak(this,'vaniteux','fr')">🔊</button></span><span class="phonetic">/va.ni.tø/</span>
+<div class="meaning">adj. 爱慕虚荣的</div>
+<div class="example">Le vaniteux ne comprend que la louange. — 爱虚荣的人只听得懂赞美。</div>
+</div>
+<div class="vocab-card">
+<span class="word">consigne<button class="play-btn" onclick="speak(this,'consigne','fr')">🔊</button></span><span class="phonetic">/kɔ̃.siɲ/</span>
+<div class="meaning">n.f. 规定，命令</div>
+<div class="example">C'est la consigne. — 这是规定。</div>
+</div>
+<div class="vocab-card">
+<span class="word">contradictoire<button class="play-btn" onclick="speak(this,'contradictoire','fr')">🔊</button></span><span class="phonetic">/kɔ̃.tʁa.dik.twaʁ/</span>
+<div class="meaning">adj. 矛盾的，自相矛盾的</div>
+<div class="example">Les fleurs sont si contradictoires ! — 花儿们就是这么矛盾！</div>
+</div>
+</div>
+
+<div class="question-box">
+<h3>🤔 今日思考</h3>
+<p>六颗星球上的大人，你最像哪一个？是只听赞美的"虚荣者"，还是明知问题却用问题逃避问题的"酒鬼"，又或者只知道数数却不懂意义的"商人"？今天，试着对那个"星球上的自己"说一句话。</p>
+</div>
+
+<a class="back-link" href="https://hcqchris.github.io/learningnotes/petit-prince/">← 返回《小王子》目录</a>
+</div>
+
+<script>
+var _audio=null;
+function speak(btn,text,lang){
+lang=lang||'fr';
+if(_audio){_audio.pause();_audio=null;document.querySelectorAll('.play-btn').forEach(function(b){b.classList.remove('playing');b.textContent='🔊'})}
+var a=new Audio('https://translate.google.com/translate_tts?ie=UTF-8&tl='+lang+'&client=tw-ob&q='+encodeURIComponent(text));
+_audio=a;
+a.onplay=function(){btn.classList.add('playing');btn.textContent='⏹'};
+a.onended=function(){btn.classList.remove('playing');btn.textContent='🔊';_audio=null};
+a.onerror=function(){btn.classList.remove('playing');btn.textContent='🔊';_audio=null};
+a.play()}
+</script>
+</body>
+</html>
