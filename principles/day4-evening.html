@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📐 原则 Day 4 · 傍晚实战</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: linear-gradient(135deg, #0d1117 0%, #161b22 100%); color: #e6edf3; padding: 16px; line-height: 1.8; min-height: 100vh; }
+  .container { max-width: 680px; margin: 0 auto; }
+  h1 { text-align: center; font-size: 22px; margin-bottom: 4px; background: linear-gradient(90deg, #58a6ff, #d2a8ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .subtitle { text-align: center; color: #8b949e; font-size: 13px; margin-bottom: 24px; }
+  .section-label { display: inline-block; background: linear-gradient(90deg, #238636, #2ea043); color: #fff; padding: 2px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; margin-bottom: 10px; }
+  h2 { font-size: 18px; margin: 28px 0 14px; padding-bottom: 6px; border-bottom: 2px solid #30363d; color: #58a6ff; }
+  h3 { font-size: 15px; margin: 16px 0 8px; color: #d2a8ff; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 18px; margin-bottom: 16px; }
+  .scene-card { background: linear-gradient(135deg, #1a1e2e 0%, #1c2333 100%); border: 1px solid #388bfd44; border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+  .scene-card .icon { font-size: 28px; margin-bottom: 8px; }
+  .scene-card h3 { color: #58a6ff; font-size: 17px; margin-bottom: 10px; }
+  .scene-card p { color: #c9d1d9; font-size: 14px; }
+  .apply-box { background: #0d1117; border-left: 4px solid #58a6ff; padding: 14px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+  .apply-box .label { color: #58a6ff; font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+  .think-box { background: #0d1117; border-left: 4px solid #d2a8ff; padding: 14px 16px; margin: 12px 0; border-radius: 0 8px 8px 0; }
+  .think-box .label { color: #d2a8ff; font-weight: 700; font-size: 13px; margin-bottom: 4px; }
+  .quiz-card { background: linear-gradient(135deg, #1c1e26 0%, #21232e 100%); border: 1px solid #f0883e55; border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+  .quiz-card .q-num { display: inline-block; background: #f0883e; color: #fff; width: 28px; height: 28px; border-radius: 50%; text-align: center; line-height: 28px; font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+  .quiz-card p { color: #c9d1d9; font-size: 15px; margin-bottom: 10px; }
+  .quiz-option { display: block; background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 10px 14px; border-radius: 8px; margin-bottom: 8px; font-size: 14px; cursor: pointer; transition: all 0.2s; }
+  .quiz-option:hover { border-color: #58a6ff; background: #1c2333; }
+  .quiz-option.correct { border-color: #238636; background: #0d1f0d; color: #3fb950; }
+  .answer-reveal { background: #0d1f0d; border: 1px solid #238636; border-radius: 10px; padding: 14px 16px; margin-top: 12px; display: none; }
+  .answer-reveal.show { display: block; }
+  .answer-reveal .correct-mark { color: #3fb950; font-weight: 700; }
+  .reveal-btn { background: #238636; color: #fff; border: none; border-radius: 8px; padding: 8px 20px; font-size: 14px; cursor: pointer; margin-top: 10px; }
+  .reveal-btn:active { background: #2ea043; }
+  .translate-card { background: linear-gradient(135deg, #1e1a2e 0%, #1f1c2e 100%); border: 1px solid #d2a8ff44; border-radius: 14px; padding: 20px; margin-bottom: 16px; }
+  .translate-card .zh-text { color: #e6edf3; font-size: 15px; margin-bottom: 12px; line-height: 1.8; }
+  .translate-card .hint { color: #8b949e; font-size: 13px; margin-top: 10px; }
+  .play-btn { display: inline-flex; align-items: center; gap: 4px; background: #58a6ff; color: #fff; border: none; border-radius: 16px; padding: 3px 10px; font-size: 12px; cursor: pointer; vertical-align: middle; margin-left: 6px; }
+  .play-btn:active { background: #388bfd; }
+  .play-btn.playing { background: #cf222e; }
+  .en { font-style: italic; color: #8b949e; }
+  .formula { background: #0d1117; border: 2px solid #58a6ff; border-radius: 10px; padding: 14px; text-align: center; font-size: 17px; font-weight: 700; margin: 12px 0; color: #58a6ff; }
+  .back-link { display: block; text-align: center; margin-top: 24px; padding: 12px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; color: #58a6ff; text-decoration: none; font-size: 14px; font-weight: 600; }
+  .footer { text-align: center; font-size: 12px; color: #484f58; margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>📐 原则 Day 4 · 傍晚实战</h1>
+  <p class="subtitle">Principles: Life and Work — 学习如何有效决策 · 实战应用版</p>
+
+  <!-- 今日回顾 -->
+  <span class="section-label">今日核心</span>
+  <div class="card">
+    <h3>午间学习要点回顾</h3>
+    <div class="formula">决策 = 学习 + 决定</div>
+    <p style="color:#8b949e;font-size:13px;margin-bottom:10px;">今日午间学习的四大决策原则：</p>
+    <p style="color:#c9d1d9;font-size:14px;">1. <strong style="color:#58a6ff;">两步决策法</strong>：先学习再决定，跳过学习直接决定是糟糕决策的根源</p>
+    <p style="color:#c9d1d9;font-size:14px;">2. <strong style="color:#58a6ff;">二阶后果思维</strong>：追问"然后呢？再然后呢？"</p>
+    <p style="color:#c9d1d9;font-size:14px;">3. <strong style="color:#58a6ff;">期望值决策法</strong>：概率 x 收益 = 是否值得</p>
+    <p style="color:#c9d1d9;font-size:14px;">4. <strong style="color:#58a6ff;">系统化决策</strong>：把经验写成可复用的原则/算法</p>
+  </div>
+
+  <!-- 实战场景 -->
+  <h2>📌 今日场景</h2>
+  <div class="scene-card">
+    <div class="icon">💼</div>
+    <h3>场景：转行决策——要不要从保险行业跳到互联网？</h3>
+    <p>你目前在保险行业工作了5年，收入稳定但增长放缓。朋友给你推荐了一个互联网公司的机会，薪资涨幅30%，但行业波动大，可能面临裁员风险。你该如何做出这个重大决策？</p>
+  </div>
+
+  <div class="apply-box">
+    <div class="label">🔍 知识应用：达利欧决策法四步拆解</div>
+    <p style="color:#c9d1d9;font-size:14px;"><strong style="color:#58a6ff;">Step 1 — 先学习再决定</strong></p>
+    <p style="color:#8b949e;font-size:13px;">不要凭直觉说"去"或"不去"。先收集信息：互联网行业近3年的裁员数据、目标公司的财务健康状况、自己技能的迁移性。这步跳过，后面全错。</p>
+    <p style="color:#c9d1d9;font-size:14px;margin-top:10px;"><strong style="color:#58a6ff;">Step 2 — 二阶后果分析</strong></p>
+    <p style="color:#8b949e;font-size:13px;">一阶：跳槽 → 薪资涨30% ✅<br>
+    二阶：互联网节奏快 → 可能996 → 健康受损 ⚠️<br>
+    三阶：如果2年后被裁 → 保险行业人脉已断 → 再就业更困难 ❌<br>
+    → 不是说不去，而是要提前设计应对方案。</p>
+    <p style="color:#c9d1d9;font-size:14px;margin-top:10px;"><strong style="color:#58a6ff;">Step 3 — 期望值计算</strong></p>
+    <p style="color:#8b949e;font-size:13px;">假设：成功适应概率60%，收益=薪资涨幅×5年=150%<br>
+    失败概率40%，损失=2年空窗期成本=-80%<br>
+    期望值 = 0.6×150% + 0.4×(-80%) = 90% - 32% = <strong style="color:#3fb950;">58%</strong><br>
+    → 正期望值，值得尝试，但需要降低失败的损失。</p>
+    <p style="color:#c9d1d9;font-size:14px;margin-top:10px;"><strong style="color:#58a6ff;">Step 4 — 系统化：写下你的决策原则</strong></p>
+    <p style="color:#8b949e;font-size:13px;">把这次思考写成可复用的原则：<br>
+    "面对转行决策，先算期望值；若正期望，再设计止损方案；最终决策必须包含对二阶后果的预案。"</p>
+  </div>
+
+  <div class="think-box">
+    <div class="label">💭 延伸思考：决策法还能用在哪？</div>
+    <p style="color:#c9d1d9;font-size:14px;">- <strong>投资理财</strong>：买某只股票前，先用期望值算一算，而不是听消息跟风</p>
+    <p style="color:#c9d1d9;font-size:14px;">- <strong>考研vs工作</strong>：同样的四步拆解——先学习（行业需求、考研通过率）→ 二阶后果（读研3年的机会成本）→ 期望值 → 写原则</p>
+    <p style="color:#c9d1d9;font-size:14px;">- <strong>日常小决策</strong>：要不要办健身卡？一阶后果=健康 ✅，二阶后果=大概率吃灰浪费钱 ❌。用期望值：坚持概率20% × 收益 - 浪费概率80% × 损失 = ?</p>
+  </div>
+
+  <!-- 微测试 -->
+  <h2>🧪 微测试</h2>
+  <div class="quiz-card">
+    <span class="q-num">1</span>
+    <p>你正在考虑是否接受一个新项目。以下哪种做法最符合达利欧的"有效决策"原则？</p>
+    <div class="quiz-option" onclick="selectOption(this,'A')">A. 凭直觉快速决定，抓住机会不犹豫</div>
+    <div class="quiz-option" onclick="selectOption(this,'B')">B. 先收集项目相关信息，分析二阶后果，计算期望值，然后决定</div>
+    <div class="quiz-option" onclick="selectOption(this,'C')">C. 询问领导意见，让领导替你做决定</div>
+    <div class="quiz-option" onclick="selectOption(this,'D')">D. 列出所有可能的风险，因为风险最小化是最重要的</div>
+    <button class="reveal-btn" onclick="revealAnswer()">查看答案</button>
+    <div class="answer-reveal" id="answer">
+      <p><span class="correct-mark">✅ 正确答案：B</span></p>
+      <p style="color:#8b949e;font-size:13px;margin-top:6px;">达利欧的决策核心是"先学习再决定"，即先充分收集信息、分析后果（包括二阶后果）、用期望值量化判断，最后才做决定。A跳过了学习，C把决策权外移，D只关注风险最小化而非期望值最大化，都不符合"有效决策"原则。</p>
+    </div>
+  </div>
+
+  <!-- 判断题 -->
+  <div class="quiz-card">
+    <span class="q-num">2</span>
+    <p>判断题："二阶后果思维"的意思是只看决策的间接后果，忽略直接后果。</p>
+    <div class="quiz-option" onclick="selectOption(this,'T')">对</div>
+    <div class="quiz-option" onclick="selectOption(this,'F')">错</div>
+    <button class="reveal-btn" onclick="revealAnswer2()">查看答案</button>
+    <div class="answer-reveal" id="answer2">
+      <p><span class="correct-mark">✅ 正确答案：错</span></p>
+      <p style="color:#8b949e;font-size:13px;margin-top:6px;">二阶后果思维不是忽略直接后果，而是在考虑直接后果的基础上，进一步追问"然后呢？再然后呢？"——即同时关注一阶、二阶甚至三阶后果。它是"加法思维"，不是"替代思维"。</p>
+    </div>
+  </div>
+
+  <!-- 翻译小练 -->
+  <h2>📝 翻译小练</h2>
+  <div class="translate-card">
+    <h3>英译中</h3>
+    <p class="zh-text" style="color:#d2a8ff;">
+      "The best decisions are the most logical ones, not the ones you like the most."
+      <button class="play-btn" onclick="speak(this,'The best decisions are the most logical ones, not the ones you like the most.','en')"><svg viewBox="0 0 16 16" style="width:14px;height:14px;fill:currentColor;"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button>
+    </p>
+    <p class="hint">试着先自己翻译，再点击查看参考译文 👇</p>
+    <button class="reveal-btn" onclick="revealTrans()" style="margin-top:8px;">查看参考译文</button>
+    <div class="answer-reveal" id="trans">
+      <p style="color:#3fb950;">参考译文：最好的决策是最有逻辑的决策，而不是你最喜欢的决策。</p>
+      <p style="color:#8b949e;font-size:12px;margin-top:6px;">💡 关键词：logical（有逻辑的）、the ones you like the most（你最喜欢的那些）</p>
+    </div>
+  </div>
+
+  <div class="translate-card">
+    <h3>中译英</h3>
+    <p class="zh-text">"决策是两步过程：先学习，再决定。跳过学习直接决定，是大多数糟糕决策的根源。"</p>
+    <p class="hint">试着翻译成英文，再点击查看参考译文 👇</p>
+    <button class="reveal-btn" onclick="revealTrans2()" style="margin-top:8px;">查看参考译文</button>
+    <div class="answer-reveal" id="trans2">
+      <p style="color:#3fb950;">
+        参考译文："Decision-making is a two-step process: first learn, then decide. Skipping the learning step is the root of most bad decisions."
+        <button class="play-btn" onclick="speak(this,'Decision-making is a two-step process: first learn, then decide. Skipping the learning step is the root of most bad decisions.','en')"><svg viewBox="0 0 16 16" style="width:14px;height:14px;fill:currentColor;"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button>
+      </p>
+      <p style="color:#8b949e;font-size:12px;margin-top:6px;">💡 关键词：two-step process（两步过程）、root（根源）、skip（跳过）</p>
+    </div>
+  </div>
+
+  <!-- 一句话总结 -->
+  <h2>💡 今日金句</h2>
+  <div class="card" style="text-align:center;">
+    <p style="font-size:16px;color:#d2a8ff;font-weight:600;margin-bottom:6px;">
+      "Systemizing your decision making is the most important thing you can do."
+      <button class="play-btn" onclick="speak(this,'Systemizing your decision making is the most important thing you can do.','en')"><svg viewBox="0 0 16 16" style="width:14px;height:14px;fill:currentColor;"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊</button>
+    </p>
+    <p style="color:#8b949e;font-size:14px;">把决策过程系统化，是你能做的最重要的事情。</p>
+  </div>
+
+  <a class="back-link" href="./index.html">← 返回《原则》笔记</a>
+  <p class="footer">2026-05-01 傍晚推送 · 学习秘书</p>
+</div>
+
+<script>
+var _audio=null;
+function speak(btn,text,lang){
+lang=lang||'en';
+if(_audio){_audio.pause();_audio=null;document.querySelectorAll('.play-btn').forEach(function(b){b.classList.remove('playing');b.innerHTML='<svg viewBox="0 0 16 16" style="width:14px;height:14px;fill:currentColor;"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊'})}
+var a=new Audio('https://translate.google.com/translate_tts?ie=UTF-8&tl='+lang+'&client=tw-ob&q='+encodeURIComponent(text));
+_audio=a;
+a.onplay=function(){btn.classList.add('playing');btn.innerHTML='⏹'};
+a.onended=function(){btn.classList.remove('playing');btn.innerHTML='<svg viewBox="0 0 16 16" style="width:14px;height:14px;fill:currentColor;"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊';_audio=null};
+a.onerror=function(){btn.classList.remove('playing');btn.innerHTML='<svg viewBox="0 0 16 16" style="width:14px;height:14px;fill:currentColor;"><path d="M3.255 3.666a.75.75 0 0 1 0 1.068A6.23 6.23 0 0 0 1.5 8.667a6.23 6.23 0 0 0 1.755 3.933.75.75 0 0 1-1.06 1.06A7.73 7.73 0 0 1 0 8.667a7.73 7.73 0 0 1 2.195-5.001.75.75 0 0 1 1.06 0Zm9.49 0a.75.75 0 0 1 1.06 0A7.73 7.73 0 0 1 16 8.667a7.73 7.73 0 0 1-2.195 4.993.75.75 0 0 1-1.06-1.06A6.23 6.23 0 0 0 14.5 8.667a6.23 6.23 0 0 0-1.755-3.933.75.75 0 0 1 0-1.068ZM8.75 5.57v6.195a.25.25 0 0 1-.41.192L5.46 9.583a.25.25 0 0 1 0-.384l2.88-2.374a.25.25 0 0 1 .41.192Z"/></svg> 🔊';_audio=null};
+a.play()}
+
+function selectOption(el,val){
+  document.querySelectorAll('.quiz-option').forEach(function(o){o.style.borderColor='#30363d';o.style.background='#21262d'});
+  el.style.borderColor='#58a6ff';el.style.background='#1c2333';
+}
+
+function revealAnswer(){document.getElementById('answer').classList.add('show')}
+function revealAnswer2(){document.getElementById('answer2').classList.add('show')}
+function revealTrans(){document.getElementById('trans').classList.add('show')}
+function revealTrans2(){document.getElementById('trans2').classList.add('show')}
+</script>
+</body>
+</html>

@@ -57,3 +57,15 @@
 4. 系统化决策：把经验写成可复用的原则/算法，而非每次从零拍脑袋
 **核心词汇**：decision-making (决策), expected value (期望值), second-order consequence (二阶后果), believability-weighted (可信度加权的), systemize (系统化)
 **关联知识**：Day 3"头脑极度开放"→开放的目的就是获取更全面信息→做出更优决策，形成完整决策链
+
+### 傍晚推送（18:30）✅ 已执行
+**学习内容**：实战应用+微测试
+核心知识点：
+1. 达利欧决策法四步实战拆解：先学习→二阶后果分析→期望值计算→系统化写原则
+2. 转行决策场景应用：用期望值量化判断，用二阶后果设计预案
+微测试题目：
+1. [选择题] 接受新项目时最符合达利欧决策原则的做法？正确答案：B（先收集信息、分析二阶后果、计算期望值再决定）
+2. [判断题] 二阶后果思维是只看间接后果忽略直接后果？正确答案：错（是加法思维，在直接后果基础上追问"然后呢"）
+**翻译小练**：
+- 英译中："The best decisions are the most logical ones, not the ones you like the most." → 最好的决策是最有逻辑的决策，而不是你最喜欢的决策。
+- 中译英："决策是两步过程：先学习，再决定。" → "Decision-making is a two-step process: first learn, then decide."
